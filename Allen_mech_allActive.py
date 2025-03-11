@@ -259,7 +259,7 @@ class NaV(Channel):
         """Compute the current through the channel."""
         prefix = self._name
         O = u[f"{prefix}_O"]  # Open state probability
-        na_cond = params[f"{prefix}_gNav"]
+        na_cond = params[f"{prefix}_gNaV"]
         current = na_cond * O * (voltages - params["eNa"])
         return current
 
